@@ -1,0 +1,243 @@
+*{
+    font-family: 'Poppins', sans-serif;
+ }
+ body{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 120vh;
+     width: 100%;
+     background:whitesmoke;
+     overflow: hidden;
+
+ }
+ 
+ 
+ 
+ 
+ .main_box1{
+     /* height: 95vh; */
+     width: 150vh;
+     display: flex;
+     background-color: #fff;
+ }
+ 
+ #first_sec2{
+     /* height: 50%; */
+     /* width: 45%; */
+     margin-left: 30px;
+     /* margin-top:2rem; */
+     position: relative;
+     display: inline-block;
+      font-size: 12px; 
+      /* border: 1px solid blue; */
+ }
+ #first_sec2 h3{
+    font-size: 25px;
+    margin-left: 200px;
+     margin-top: 50px;
+ }
+ #first_sec2 p{
+    font-size: 18px;
+    margin-left: 0px;
+    /* margin-bottom: px; */
+    margin-top: 40px;
+ }
+ #first_sec2 h1 {
+    margin-left: 40px;
+ }
+ /* #login_form{
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1.9px solid rgb(182, 180, 180);
+    border-top:0;
+    border-left: 0;
+    border-right: 0;
+ }
+ .login-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  } */
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+  
+}
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1.9px solid rgb(182, 180, 180);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    
+
+  }
+  
+  /* Additional styling for labels if needed */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  select{
+     border: none;
+     margin-left: 50%;
+     outline: none;
+  }
+  #label_form{
+     border: 1.9px solid rgb(182, 180, 180);
+     border-top:0;
+     border-left: 0;
+     border-right: 0;
+     width: 40%;
+     /* height: 1.5rem; */
+     margin-top: 20px;
+     display: inline-block;
+     margin: 10px 10px 5px ;
+     position: relative;
+  }
+  .down{
+     position: absolute;
+     right: 1.5rem;
+     bottom: 0;
+     
+     
+  }
+  #submit1{
+     width: 80%;
+     height: 3.5rem;
+     background-color: #fff;
+     border: 2px solid #FFC700;
+     text-align: center;
+     margin-left: 8%;
+     margin-top: 5px;
+     border-radius: 2rem;
+     bottom: 6rem;
+     color:#FFC700;
+     font-size: larger;
+     font-weight: 600;
+     transition: 0.3s;
+  }
+  #submit1:hover{
+      background-color: #FFC700;
+      color: #fff;
+      font-size: x-large;
+  }
+  #account{
+    margin-left: 80px;
+    font-size: 11px;
+    }
+    #privacy {
+        margin-left: 30px;
+    }
+  a, span{
+     color:#FFC700;
+     text-decoration: none;
+  }
+ 
+ 
+  .sec_sec22{
+     /* height: 95%; */
+     width: 45%;   
+     display: inline-block;
+     /* vendorsign.css */
+    background-image: url('/public/images/Rectangle 7.png'); 
+     background-size: cover;
+     background-position: center;
+     border-radius: 30px;
+     margin-left: 100px; 
+     margin-top: 0%;
+     
+ }
+ #image1{
+    height: 5rem;
+    width: 10rem;
+    background-size: cover;
+    /* border: 2px solid #FFC700; */
+    position: absolute;
+   top: 3.6rem;
+    left: 13%; 
+} 
+
+ 
+    @media (max-width: 820px) {
+
+
+    .main_box1{
+      
+       margin-bottom: -200px;
+       
+
+    }
+
+    .sec_sec22 {
+        display: none;
+      }
+  
+  
+    .form-group {
+      /* width: 100%; */
+      margin-top: 40px; 
+
+    }
+
+    #first_sec2{
+        /* height: 50%; 
+        width: 55%; */
+        margin-left: 325px;
+        margin-top: -100px;
+
+
+
+    }
+    #image1{
+       top: 1rem;
+        left: 1%; 
+    } 
+    #first_sec2 h3{
+        font-size: 30px;
+        margin-left: 140px; 
+        margin-top: 540px; 
+ 
+    }
+    #first_sec2 p{
+       font-size: 20px;
+       margin-left: 5px; 
+       margin-top: 100px;
+    
+    }   
+
+
+    #submit1 {
+      margin-top: 20px;
+      margin-left: 90px;
+    }
+  }
+
+#account{
+    margin-left: 80px;
+    font-size: 19px;
+    }
+    #first_sec2 h1{
+        margin-left: 80px;
+    }
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
