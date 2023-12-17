@@ -17,7 +17,13 @@ const VendorLogin = () => {
     const script = document.createElement('script');
     script.src = 'https://apis.google.com/js/platform.js';
     script.async = true;
+    
+    script.onerror = (error) => {
+      console.error('Error loading Google Sign-In API script:', error);
+    };
+    
     document.body.appendChild(script);
+    
 
     script.onload = () => {
       // Initialize the Google Sign-In API
