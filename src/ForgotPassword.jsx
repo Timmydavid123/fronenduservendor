@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './OtpVerification.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './forgot-pass.css'
 
 const ForgottenPassword = () => {
   const [email, setEmail] = useState('');
@@ -38,7 +39,7 @@ const ForgottenPassword = () => {
   return (
     <html lang="en">
       {/* ... (head section) */}
-      <body className="container bg-light">
+      <body className="containers bg-light">
         <div className="bg-white h-75" id="mainbox9">
           <section className="w-50 mx-auto">
             <img src="./images/Folder with documents and a padlock.png" alt="" className="h-100 w-100 px-auto" />
@@ -59,12 +60,12 @@ const ForgottenPassword = () => {
               />
               <button
                 type="button"
-                className="btn text-center btn-warning btn-lg text-center w-50 text-white"
+                className="btn7 text-center btn7-warning btn-lg text-center w-50 text-black"
                 style={{ margin: '0px 25%' }}
                 onClick={handleSendOTP}
                 disabled={loading}
               >
-                {loading ? 'Sending...' : 'Send OTP'}
+                {loading ? 'Sending...' : 'Send Link'}
               </button>
             </form>
           </section>

@@ -23,7 +23,7 @@ const VendorLogin = () => {
       // Initialize the Google Sign-In API
       window.gapi.load('auth2', () => {
         window.gapi.auth2.init({
-          client_id: 'process.env.GOOGLE_CLIENT_ID', 
+          client_id: '659683617107-0k1fkhku6ttc21q0kibbb91amf172e23.apps.googleusercontent.com', 
         });
       });
     };

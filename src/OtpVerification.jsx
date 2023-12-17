@@ -87,7 +87,7 @@ const OtpVerification = () => {
 
             <button
               type="submit"
-              className="btn4 btn4-warning btn1-lg text-black w-50"
+              className="btn6 btn6-warning btn1-lg text-black w-50"
             //   style={{ margin: '0px 25%' }}
               disabled={loading || countdown === 0}
             >

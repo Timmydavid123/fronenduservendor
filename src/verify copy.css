@@ -60,14 +60,14 @@
     font-weight: bold;
    }
    
-   .btn3 {
+   .btn9 {
     width: 80%;
     height: 3.5rem;
-    background-color: #fff;
+    
     border: 2px solid #FFC700;
     text-align: center;
-    margin-left: 0px;
-    margin-top: 0px;
+    margin-left: 80px;
+    margin-top: 20px;
     border-radius: 2rem;
     bottom: 6rem;
     color: #FFC700;
@@ -76,7 +76,7 @@
     transition: 0.3s;
    }
    
-   .btn3:hover {
+   .btn9:hover {
     background-color: #FFC700;
     color: #fff;
     font-size: x-large;

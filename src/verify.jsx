@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './OtpVerification.css'; 
+import './verify copy.css'; 
 
 
 const ChangePasswordVerification = () => {
@@ -12,7 +12,7 @@ const ChangePasswordVerification = () => {
   const handleContinue = () => {
     setLoading(true);
 
-    // You can perform any asynchronous operation here (like navigation or API call)
+    // You can perform any asynchronous operati on here (like navigation or API call)
     // For example, navigating to the login page after a delay
     setTimeout(() => {
       setLoading(false);
@@ -38,9 +38,9 @@ const ChangePasswordVerification = () => {
 
           <button
             type="button"
-            className="btn btn-warning btn-lg w-75 text-white"
+            className="btn9 btn9-warning btn4-lg w-75 text-black"
             onClick={handleContinue}
-            disabled={loading}
+            enabled={loading}
           >
             {loading ? 'Loading...' : 'Continue'}
           </button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './passwordlinksent.css'
+
 const ResetPasswordLinkSent = () => {
   const handleResendLink = () => {
     // Implement the logic to resend the password reset link

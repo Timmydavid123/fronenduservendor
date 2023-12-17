@@ -21,15 +21,15 @@ const ChangePasswords = () => {
 
   return (
     <div className="container bg-light">
-      <div className="bg-white py-3 ">
-        <section className="w-50 mx-auto" id="">
+      <div className="main bg-white py-3 ">
+        <section className="w-40 mx-auto" id="">
           <img src="./images/Locked padlock security protection privacy 3d icon on bubble speech chat.png" alt="" className="h-100 w-100 mx-auto" />
         </section>
 
         <section className="divs">
           <p className="text-center text-success">Password Changed Successfully</p>
 
-          <p style={{ fontWeight: 'bold' }} className="text-center">
+          <p style={{ fontWeight: 'light' }} className="text-center">
             Congratulations, your password has been <br />
             updated, your account is now secure with the <br />
             new password.
@@ -37,7 +37,7 @@ const ChangePasswords = () => {
 
           <button
             type="button"
-            className="btn text-center btn-warning btn-lg text-center w-50"
+            className="btn8 text-center btn8-warning btn-lg text-center w-50"
             style={{ margin: '0px 25%' }}
             onClick={handleContinue}
             disabled={loading}
