@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import './log_in.css';
 
 const VendorLogin = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Import the useNavigate hook
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -17,19 +17,18 @@ const VendorLogin = () => {
     const script = document.createElement('script');
     script.src = 'https://apis.google.com/js/platform.js';
     script.async = true;
-    
+
     script.onerror = (error) => {
       console.error('Error loading Google Sign-In API script:', error);
     };
-    
+
     document.body.appendChild(script);
-    
 
     script.onload = () => {
       // Initialize the Google Sign-In API
       window.gapi.load('auth2', () => {
         window.gapi.auth2.init({
-          client_id: '659683617107-0k1fkhku6ttc21q0kibbb91amf172e23.apps.googleusercontent.com', 
+          client_id: '659683617107-0k1fkhku6ttc21q0kibbb91amf172e23.apps.googleusercontent.com',
         });
       });
     };
@@ -61,7 +60,6 @@ const VendorLogin = () => {
     navigate('/forgot-password');
   };
 
-
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -72,9 +70,6 @@ const VendorLogin = () => {
       // Validate email and password
       if (!email || !password) {
         const errorMessage = 'Please enter both email and password.';
-        // setErrors([errorMessage]);
-
-        // Display error message using toast
         toast.error(errorMessage);
         return;
       }
@@ -89,7 +84,7 @@ const VendorLogin = () => {
         rememberMe,
       });
 
-      // If successful, you can navigate or perform other actions
+      // If successful, you can navigate to the desired URL
       console.log('Login successful:', response.data);
 
       // Reset form fields
@@ -99,6 +94,9 @@ const VendorLogin = () => {
 
       // Display success message using toast
       toast.success('Login successful!');
+
+      // Redirect the user to the desired URL
+      navigate('https://marketsparkle.vercel.app/');
     } catch (error) {
       // Update the errors state with the error messages
       if (error.response && error.response.data.errors) {
@@ -108,7 +106,7 @@ const VendorLogin = () => {
         error.response.data.errors.forEach((errorMessage) => {
           toast.error(errorMessage);
         });
-      } else {                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+      } else {
         toast.error('An error occurred during login. Please try again.');
       }
 
@@ -120,8 +118,7 @@ const VendorLogin = () => {
   };
 
   return (
-    <div>                                                                                                                                                                                                                                                                             
-
+    <div>
       <img src="./images/LOGO.png" alt="" id="image" />
 
       <div id="mainbox4">
@@ -150,22 +147,22 @@ const VendorLogin = () => {
             />
           </div>
 
-              <form action="">
-                <div className="remember-forgot-container">
-                  <label htmlFor="remember">
-                    <input
-                      type="checkbox"
-                      id="remember"
-                      checked={rememberMe}
-                      onChange={() => setRememberMe(!rememberMe)}
-                    />
-                    <span style={{ color: 'black' }}>Remember me</span>
-                  </label>
-                  <Link  to="/forgot-password" onClick={handleForgotPassword}>
-           <h5 style={{ color: 'black' }}>Forgotten password?</h5> 
-          </Link>
-                </div>
-              </form>
+          <form action="">
+            <div className="remember-forgot-container">
+              <label htmlFor="remember">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  checked={rememberMe}
+                  onChange={() => setRememberMe(!rememberMe)}
+                />
+                <span style={{ color: 'black' }}>Remember me</span>
+              </label>
+              <Link to="/forgot-password" onClick={handleForgotPassword}>
+                <h5 style={{ color: 'black' }}>Forgotten password?</h5>
+              </Link>
+            </div>
+          </form>
           <button id="submit" onClick={handleLogin} disabled={loading}>
             {loading ? 'Logging in...' : 'Log in'}
           </button>
@@ -186,22 +183,22 @@ const VendorLogin = () => {
           <h4 className="word">OR</h4>
           <hr />
           <div className="icons">
-          <div className="google-signin-button" onClick={() => handleGoogleSignIn()}>
-            <img
-              src="/images/google.png" // Update the path to your Google logo image
-              alt="Google"
-              className="google-logo"
-            />
-            <span>Sign in with Google</span>
+            <div className="google-signin-button" onClick={() => handleGoogleSignIn()}>
+              <img
+                src="/images/google.png" // Update the path to your Google logo image
+                alt="Google"
+                className="google-logo"
+              />
+              <span>Sign in with Google</span>
+            </div>
+            <h4 id="account1">
+              Don't have an account?<a href="/Vendorsignup"> Sign Up</a>
+            </h4>
           </div>
-          <h4 id="account1">Don't have an account?<a href="/Vendorsignup"> Sign Up</a></h4>
-        </div>
-          
         </section>
-                  
+
         {/* image_section */}
         <section className="sec_sec"></section>
-        
       </div>
     </div>
   );

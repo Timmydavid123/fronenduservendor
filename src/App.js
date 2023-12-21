@@ -11,7 +11,7 @@ import ChangePasswordVerification from './verify';
 import ChangePassword from './passwordverified';
 import ResetPasswordLinkSent from './ResetPasswordLinkSent';  
 import ChangePasswords from './passwordchanged';
-import Settings from './setting';
+
 
 const ProtectedRoute = ({ element }) => {
   // Replace this with your actual authentication logic
@@ -25,10 +25,13 @@ const App = () => {
 
   return (
     <div>
-      <ToastContainer />
+      <ToastContainer />  
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+        <Route
+            path="/"
+            element={<Home onLogin={() => setLoggedIn(true)} />}
+          />
           <Route
             path="/vendorlogin"
             element={<VendorLogin onLogin={() => setLoggedIn(true)} />}
@@ -61,9 +64,8 @@ const App = () => {
             path="/passwordchanged"
             element={<ProtectedRoute element={<ChangePasswords />} />}
           />
-          <Route 
-          path="/settings" 
-          element={<ProtectedRoute  element={<Settings/>} />} />
+     
+
         </Routes>
       </BrowserRouter>
     </div>
