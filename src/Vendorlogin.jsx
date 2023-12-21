@@ -96,7 +96,7 @@ const VendorLogin = () => {
       toast.success('Login successful!');
 
       // Redirect the user to the desired URL
-      navigate('https://marketsparkle.vercel.app/');
+      navigate('https://marketsparkle.vercel.app/home.html');
     } catch (error) {
       // Update the errors state with the error messages
       if (error.response && error.response.data.errors) {
