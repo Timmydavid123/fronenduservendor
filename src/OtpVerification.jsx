@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './verify.css'
-import 'bootstrap/dist/css/bootstrap.min.css';// Import Bootstrap CSS
+import './verify.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const OtpVerification = () => {
   const [otp, setOtp] = useState('');
@@ -33,10 +33,10 @@ const OtpVerification = () => {
       toast.success('Email address verified successfully.');
 
       // After successful OTP verification, navigate to the vendor login page
-      navigate('/verify');
+      navigate('/vendor-login'); // Change the route accordingly
     } catch (error) {
-      console.error('Vendor OTP verification error:', error.response.data);
-      toast.error('Vendor OTP verification unsuccessful.');
+      console.error('OTP verification error:', error.response.data);
+      toast.error('OTP verification unsuccessful.');
     } finally {
       setLoading(false);
     }
@@ -44,7 +44,10 @@ const OtpVerification = () => {
 
   const resendOtp = async () => {
     try {
-      const response = await axios.post('https://backend-cmrf.onrender.com/api/resend-otp', { /* Add necessary data for resend */ });
+      // Assuming you have the vendorId for resend OTP
+      const vendorId = '...';
+
+      const response = await axios.post('https://backend-cmrf.onrender.com/api/resend-otp', { vendorId });
       console.log('Resend OTP successful:', response.data);
       toast.success('OTP resent successfully.');
       setCountdown(600); // Reset the countdown after resending OTP
@@ -88,7 +91,6 @@ const OtpVerification = () => {
             <button
               type="submit"
               className="btn6 btn6-warning btn1-lg text-black w-50"
-            //   style={{ margin: '0px 25%' }}
               disabled={loading || countdown === 0}
             >
               {loading ? 'Verifying...' : 'Submit'}
